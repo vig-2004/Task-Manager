@@ -1,16 +1,13 @@
 import React from "react";
-import TaskCard from "./TaskCard";
-import TaskList from "./components/TaskList";
-import Task from "./components/Task";
-import TaskForm from "./components/TaskForm";
-import TaskApp from "./components/TaskApp";
+import { RouterProvider } from "react-router-dom";
+
+import router from "./routes";
 
 const App = () => {
   return (
-    <div className="App">
-      <TaskApp />
+    <div>
+      <RouterProvider router={router} />
     </div>
   );
 };
-
 export default App;

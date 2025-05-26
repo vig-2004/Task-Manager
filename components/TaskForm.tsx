@@ -1,3 +1,4 @@
+// src/components/TaskForm.tsx
 import React from "react";
 import { TaskItem } from "../types";
 
@@ -35,7 +36,8 @@ const TaskForm = (props: TaskFormProps) => {
       return;
     }
 
-    const newTaskData = {
+    const newTaskData: TaskItem = {
+      id: Date.now().toString(), // Generate a unique ID based on the current timestamp
       title: formState.title.trim(),
       description: formState.description.trim(),
       dueDate: formState.dueDate,
